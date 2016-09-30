@@ -6,7 +6,7 @@
 <session-factory>
 <!-- data base connection details-->
 
-<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 <property name="hibernate.connection.url">jdbc:mysql:mysql-gestioncontact.alwaysdata.net/gestioncontact_bd</property>
 <property name="hibernate.connection.username">128009</property>
