@@ -24,4 +24,14 @@
     <servlet-name>addContactServlet</servlet-name>
     <url-pattern>/addContact</url-pattern>
   </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>removeContactServlet</display-name>
+    <servlet-name>removeContactServlet</servlet-name>
+    <servlet-class>servlets.removeContactServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>removeContactServlet</servlet-name>
+    <url-pattern>/removeContact</url-pattern>
+  </servlet-mapping>  
 </web-app>

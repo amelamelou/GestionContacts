@@ -26,6 +26,11 @@
 	<input class="button" type="submit" value="Liste Contacts" />
 	</form>
 	</td>
+	<td>
+	<form method="post" action="removeContact.jsp">
+	<input class="button" type="submit" value="Supprimer un contact" />
+	</form>
+	</td>
 	</tr>
 
 </table>

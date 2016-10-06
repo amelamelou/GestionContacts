@@ -8,7 +8,7 @@ public interface IContactService {
 	
 	public Contact updateContact(Contact contact);
 	
-	public boolean deleteContact(Contact contact);
+	public boolean deleteContact(long id);
 	
 	public Contact searchContact(Contact contact);
 

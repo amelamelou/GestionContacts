@@ -16,7 +16,7 @@ public TreeSet<Contact> readContact();
 
 public Contact updateContact(Contact contact);
 
-public boolean deleteContact(Contact contact);
+public boolean deleteContact(long id);
 
 
 }

@@ -31,9 +31,13 @@ public class ImplContactService implements Service.IContactService {
 	}
 
 	@Override
-	public boolean deleteContact(Contact contact) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean deleteContact(long id) {
+		boolean reponse;
+		IContactDAO contactdao= new ImplContactDAO();
+		reponse=contactdao.deleteContact(id);
+		
+		
+		return reponse;
 	}
 
 	@Override

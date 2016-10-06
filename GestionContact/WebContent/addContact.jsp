@@ -12,7 +12,7 @@
 <table>
 
 	<tr>
-	<td><h2>Voici un premier exemple de composant web avec un servlet</h2></td>
+	<td><h2>Ajout Contact</h2></td>
 	</tr>
 	<tr>
 	<td> <i> Nom : <input type="text" name="lastname" size="50"></i></td>
