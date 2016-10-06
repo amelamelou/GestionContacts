@@ -2,23 +2,18 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="entites">
-  <class name="Contact" table="Contact_Table">
-  	 <id name="idContact" type="long" column="ID_CONTACT" >
+  <class name="PhoneNumber" table="PhoneNumber_Table">
+  	 <id name="id" type="long" column="ID_PHONENUMBER" >
    		<generator class="increment"/>
   	 </id>
   	 
-  	 <property name="firstName">
-  	 <column name="FIRSTNAME"/>
+  	 <property name="phoneKind">
+  	 <column name="PHONEKIND"/>
   	 </property>
   	 
-  	 <property name="lastName">
-  	 <column name="LASTNAME"/>
+  	 <property name="phoneNumber">
+  	 <column name="PHONENUMBER"/>
   	 </property>
-  	 
-  	 <property name="email">
-  	 <column name="EMAIL"/>
-  	 </property>
-  	 
 
   </class>
 </hibernate-mapping>
