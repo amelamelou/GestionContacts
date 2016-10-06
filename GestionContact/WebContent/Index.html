@@ -2,33 +2,54 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">		
+		<link rel="stylesheet" href="<c:url value='/inc/style.css'/>"/>
 <title>Insert title here</title>
 </head>
 <body>
 
-<form method="post" action="Login">
-<table>
 
-	<tr>
-	<td><h2>Voici un premier exemple de composant web avec un servlet</h2></td>
-	</tr>
-	<tr>
-	<td> <i> Name : <input type="text" name="name" size="25"></i></td>
-	</tr>
-	
-	<tr>
-		<td> <i> Password : <input type="password" name="mdp" size="25"></i></td>
-	</tr>
-	<tr>
-	<td>
-	<input class="button" type="submit" value="Submit" />
-	<input class="button" type="reset"  value="Reset" />
-	</td>
-	</tr>
 
-</table>
+  <div class="msj-site-header">
+      		<div class="container">
+       			<h1>Gestion de vos contacts </h1>
+      		</div>
+    	</div>
+    	
+    	<div class="container">
+   		<div class="row">
+       		<div class="col-md-9">
+	          	<div class="">
+				  	<h1 class="page-header">Bienvenue !</h1>
+        			
+      		  	
+				</div>
+				<form method="post" action="Login">
+            <fieldset>
+                <legend>Connexion</legend>
+                <p>Vous pouvez vous connecter via ce formulaire.</p>
 
-</form>
+                <label for="login">Identifiant</label>
+                <input type="text" name="name" size="25" maxlength="60" />
+                <br />
+
+                <label for="motDePasse">Mot de passe</label>
+              	<input type="password" name="mdp" size="25" maxlength="20" />
+                <br />
+
+                
+				<input class="button" type="submit" value="Submit" />
+				<input class="button" type="reset"  value="Reset" />
+                <br />
+            </fieldset>
+        </form>
+			</div>
+			
+			
+		</div>
+	</div>
 
 </body>
 </html>

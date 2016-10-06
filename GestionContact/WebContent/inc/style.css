@@ -1,0 +1,87 @@
+/* Général ------------------------------------------------------------------------------------- */
+
+body, p, legend, label, input {
+    font: normal 8pt verdana, helvetica, sans-serif;
+}
+
+fieldset {
+    padding: 10px;
+    border: 1px #0568CD solid;
+}
+
+legend {
+    font-weight: bold;
+    color: #0568CD;
+}
+
+/* Forms --------------------------------------------------------------------------------------- */
+
+form label {
+    float: left;
+    width: 200px;
+    margin: 3px 0px 0px 0px;
+}
+
+form input {
+    margin: 3px 3px 0px 0px;
+    border: 1px #999 solid;
+}
+
+form input.sansLabel {
+    margin-left: 200px;
+}
+
+form .requis {
+    color: #c00;
+}
+
+form .erreur {
+    color: #900;
+}
+form .succes {
+    color: #090;
+}
+
+.msj-site-nav {
+    background-color: #fff;
+    border-bottom: 0 none;
+    margin-bottom: 0;
+}
+.msj-site-nav .navbar-brand, .msj-site-nav .navbar-nav > li > a {
+    color: #563d7c;
+    font-weight: 500;
+}
+.msj-site-nav .navbar-nav > .active > a, .msj-site-nav .navbar-nav > .active > a:hover, .msj-site-nav .navbar-nav > li > a:hover {
+    background-color: #f9f9f9;
+    color: #463265;
+}
+.msj-site-nav .navbar-header .navbar-toggle:focus, .msj-site-nav .navbar-header .navbar-toggle:hover {
+    background-color: #f9f9f9;
+    border-color: #f9f9f9;
+}
+.msj-site-header{
+    background-color: #6f5499;
+    background-image: linear-gradient(to bottom, #563d7c 0px, #6f5499 100%);
+    background-repeat: repeat-x;
+    color: #cdbfe3;
+    padding: 30px 15px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.msj-site-header {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.msj-site-header h1 {
+    color: #fff;
+    margin-top: 0;
+}
+.msj-site-header p {
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+.msj-site-header .container {
+    position: relative;
+}
