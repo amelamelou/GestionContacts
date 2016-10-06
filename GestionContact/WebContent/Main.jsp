@@ -4,21 +4,31 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Espace Personnel</title>
 </head>
 <body>
-		<form method="post" action="addContact.jsp">
+		
 <table>
 
 	<tr>
 	<td>
+	<form method="post" action="addContact.jsp">
 	<input class="button" type="submit" value="Creer un Contact" />
+	</form>
+	</td>
+	<td>
+	<form method="post" action="SearchContact.jsp">
+	<input class="button" type="submit" value="Rechercher un Contact" />
+	</form>
+	</td>
+	<td>
+	<form method="post" action="ListContact.jsp">
+	<input class="button" type="submit" value="Liste Contacts" />
+	</form>
 	</td>
 	</tr>
 
 </table>
-
-</form>
 	
 </body>
 </html>
