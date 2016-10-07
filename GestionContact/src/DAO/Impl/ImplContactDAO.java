@@ -11,15 +11,11 @@ public class ImplContactDAO implements IContactDAO {
 	
 	@Override
 	public void createContact(Contact contact) {
-		System.out.println("Contact créé");
+		
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		
-		//démarrer une transaction
 		session.beginTransaction();
-		//persister l’objet
 		session.save(contact);
-		//recharger l’objet à partir de la session
-		//committer la transaction
 		session.getTransaction().commit();
 		}
 	
@@ -48,14 +44,10 @@ public class ImplContactDAO implements IContactDAO {
 		System.out.println("Contact supprimé");
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		
-		//démarrer une transaction
 		session.beginTransaction();
-		//persister l’objet
 		Contact contact = (Contact) session.get(Contact.class, id);
 
 		session.delete(contact);
-		//recharger l’objet à partir de la session
-		//committer la transaction
 		session.getTransaction().commit();
 		return true;
 	}

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entites">
+  <class name="Utilisateur" table="Utilisateur_Table">
+  	 <id name="idUser" type="long" column="ID_USER" >
+   		<generator class="increment"/>
+  	 </id>
+  	 
+  	 <property name="login">
+  	 <column name="LOGIN"/>
+  	 </property>
+  	 
+  	 <property name="password">
+  	 <column name="PASSWORD"/>
+  	 </property>  	 
+
+  </class>
+</hibernate-mapping>
