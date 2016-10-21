@@ -17,7 +17,7 @@
 	</form>
 	</td>
 	<td>
-	<form method="post" action="SearchContact.jsp">
+	<form method="post" action="searchContact.jsp">
 	<input class="button" type="submit" value="Rechercher un Contact" />
 	</form>
 	</td>

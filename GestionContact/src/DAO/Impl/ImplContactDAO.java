@@ -1,6 +1,8 @@
 package DAO.Impl;
+import java.util.List;
 import java.util.TreeSet;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 import DAO.IContactDAO;
@@ -46,7 +48,9 @@ public class ImplContactDAO implements IContactDAO {
 		
 		session.beginTransaction();
 		Contact contact = (Contact) session.get(Contact.class, id);
-
+		Query query = session.createSQLQuery("SELECT * From contact_table;");
+		List results = query.list();
+		System.out.println(results);
 		session.delete(contact);
 		session.getTransaction().commit();
 		return true;

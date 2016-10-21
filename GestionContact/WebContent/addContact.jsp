@@ -26,6 +26,24 @@
 	</tr>
 	<tr>
 	<td>
+	<input type="checkbox" id="check"/>
+	<div id="container" style="visibility:hidden; border-radius:5px; border:1px solid #829fb3; width:300px; height:20px; background-color:white;"></div>
+		<script type="text/javascript">
+			window.onload=function() { 
+       		document.querySelector('#check').onclick=function(e) {
+               if (e.target.checked) {
+            	   
+                    document.querySelector('#container').style.visibility="visible";
+               }else{
+                        document.querySelector('#container').style.visibility="hidden";
+               }
+       }	
+			}
+</script>
+	</td>
+	</tr>
+	<tr>
+	<td>
 	<input class="button" type="submit" value="Submit" />
 	<input class="button" type="reset"  value="Reset" />
 	</td>

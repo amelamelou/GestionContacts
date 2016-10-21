@@ -3,10 +3,18 @@ package entites;
 public class Address {
 	
 		private long id;
-		private String Street;
-		private String City;
+		private String street;
+		private String city;
+		public String getStreet() {
+			return street;
+		}
+
+		public void setStreet(String street) {
+			this.street = street;
+		}
+
 		private String zip;
-		private String Country;
+		private String country;
 		private Contact contact;
 		
 		public Contact getContact() {
@@ -27,20 +35,12 @@ public class Address {
 			this.id = id;
 		}
 
-		public String getStreet() {
-			return Street;
-		}
-
-		public void setStreet(String street) {
-			Street = street;
-		}
-
 		public String getCity() {
-			return City;
+			return city;
 		}
 
 		public void setCity(String city) {
-			City = city;
+			this.city = city;
 		}
 
 		public String getZip() {
@@ -52,12 +52,14 @@ public class Address {
 		}
 
 		public String getCountry() {
-			return Country;
+			return country;
 		}
 
 		public void setCountry(String country) {
-			Country = country;
-		};
+			this.country = country;
+		}
+
+	
 		
 		
 

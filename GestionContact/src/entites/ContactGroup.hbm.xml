@@ -9,7 +9,12 @@
   	 
   	 <property name="groupName">
   	 <column name="GROUPNAME"/>
-  	 </property>  	  	 
+  	 </property>  	 
+  	 
+  	   <set name="contacts" table="BOOK" inverse="true">
+   <key column="ID_GROUP"/>
+   <many-to-many class="Contact" column="ID_CONTACT"/>
+  </set> 	 
 
   </class>
 </hibernate-mapping>

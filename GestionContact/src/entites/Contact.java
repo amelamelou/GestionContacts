@@ -4,16 +4,31 @@ import java.util.TreeSet;
 
 public class Contact {
 	
-
 	private long idContact;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private TreeSet<PhoneNumber> phonesnumber;
-	private TreeSet<ContactGroup> contactgroup;
+	private TreeSet<ContactGroup> contactgroup;	
+	private Address address;
 	
 
-	public Contact() {}
+	public Contact(long idContact, String firstName, String lastName, String email, TreeSet<PhoneNumber> phonesnumber,
+			Address address, TreeSet<ContactGroup> contactgroup) {
+		super();
+		this.idContact = idContact;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.phonesnumber = phonesnumber;
+		this.address = address;
+		this.contactgroup = contactgroup;
+	}
+
+	public Contact(){};
+	
+
+	
 	
 	public long getIdContact() {
 		return idContact;
@@ -49,6 +64,14 @@ public class Contact {
 
 	public void setContactgroup(TreeSet<ContactGroup> contactgroup) {
 		this.contactgroup = contactgroup;
+	}
+	
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 

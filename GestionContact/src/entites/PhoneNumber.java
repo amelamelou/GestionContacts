@@ -4,8 +4,9 @@ public class PhoneNumber {
 	
 	private long id;
 	private String phoneKind;
-	private String phoneNumber;
+	private String phoneNumero;
 	private Contact contact;
+	
 	public long getId() {
 		return id;
 	}
@@ -18,11 +19,11 @@ public class PhoneNumber {
 	public void setPhoneKind(String phoneKind) {
 		this.phoneKind = phoneKind;
 	}
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public String getPhoneNumero() {
+		return phoneNumero;
 	}
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setPhoneNumero(String phoneNumero) {
+		this.phoneNumero = phoneNumero;
 	}
 	public Contact getContact() {
 		return contact;

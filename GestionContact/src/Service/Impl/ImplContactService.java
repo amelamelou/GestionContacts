@@ -1,5 +1,8 @@
 package Service.Impl;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import DAO.IContactDAO;
 import DAO.Impl.ImplContactDAO;
 import entites.Contact;
@@ -11,14 +14,22 @@ public class ImplContactService implements Service.IContactService {
 	{
 		Contact contact = new Contact();
 
-		IContactDAO contactdao= new ImplContactDAO();
+		//IContactDAO contactdao= new ImplContactDAO();
 		
 		contact.setFirstName(firstName);
 		contact.setLastName(lastName);
 		contact.setEmail(email);
 		
 
-		contactdao.createContact(contact);
+		//contactdao.createContact(contact);
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext(new
+				String[]{"applicationContext.xml"});
+				IContactDAO daoC = (ImplContactDAO)context.getBean("beanImplContactDAO");
+				Contact contact1 = (Contact)context.getBean("contactBean");
+				//Contact contact2 = (Contact)context.getBean("contactBeanC");
+		
+			daoC.createContact(contact1);
 		
 		
 		return contact;
@@ -35,6 +46,9 @@ public class ImplContactService implements Service.IContactService {
 		boolean reponse;
 		IContactDAO contactdao= new ImplContactDAO();
 		reponse=contactdao.deleteContact(id);
+		
+	
+		
 		
 		
 		return reponse;

@@ -7,6 +7,16 @@
    		<generator class="increment"/>
   	 </id>
   	 
+  <many-to-one name="adresse" column="ID_ADRESSE" unique="true" class="Adresse" not-null="true"/>
+  <set name="books" table="BOOK">
+   <key column="ID_CONTACT"/>
+   <many-to-many class="ContactGroup" column="ID_GROUP"/>
+  </set>
+  <set name="phones" inverse="true">
+   <key column="ID_PHONENUMBER"/>
+   <one-to-many class="PhoneNumber"/>
+  </set>
+  	 
   	 <property name="firstName">
   	 <column name="FIRSTNAME"/>
   	 </property>

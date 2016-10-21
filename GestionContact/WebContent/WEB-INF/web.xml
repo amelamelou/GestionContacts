@@ -24,7 +24,7 @@
     <servlet-name>addContactServlet</servlet-name>
     <url-pattern>/addContact</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <description></description>
     <display-name>removeContactServlet</display-name>
     <servlet-name>removeContactServlet</servlet-name>
@@ -33,5 +33,35 @@
   <servlet-mapping>
     <servlet-name>removeContactServlet</servlet-name>
     <url-pattern>/removeContact</url-pattern>
-  </servlet-mapping>  
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>searchContactServlet</display-name>
+    <servlet-name>searchContactServlet</servlet-name>
+    <servlet-class>servlets.searchContactServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>searchContactServlet</servlet-name>
+    <url-pattern>/searchContact</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>
+org.springframework.web.context.ContextLoaderListener
+</listener-class>
+  </listener>
+  <listener>
+    <listener-class>
+org.springframework.web.context.request.RequestContextListener
+</listener-class>
+  </listener>
+  <servlet>
+    <description></description>
+    <display-name>test</display-name>
+    <servlet-name>test</servlet-name>
+    <servlet-class>servlets.test</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>test</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
 </web-app>

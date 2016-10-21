@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+<bean id="beanImplContactDAO" class="DAO.Impl.ImplContactDAO">
+	</bean>
+	<bean id="phoneNumberBean" class="entites.PhoneNumber">
+		<property name="id">
+			<value>1</value>
+		</property>
+		<property name="phoneKind">
+			<value>Cellular</value>
+		</property>
+		<property name="phoneNumero">
+			<value>0659014859</value>
+		</property>
+		<property name="contact">
+			<ref bean="contactBean" />
+			</property>
+	</bean>
+	
+	
+	<bean id="contactGroupBean" class="entites.ContactGroup">
+		<property name="groupId">
+			<value>1</value>
+		</property>
+		<property name="groupName">
+			<value>Professional</value>
+		</property>
+	</bean>
+
+	<bean id="contactBean" class="entites.Contact">
+		<property name="idContact">
+			<value>1</value>
+		</property>
+		<property name="firstName">
+			<value>FirstName</value>
+		</property>
+		<property name="lastName">
+			<value>LastName</value>
+		</property>
+		<property name="email">
+			<value>Email</value>
+		</property>
+	</bean>
+
+	<bean id="addressBean" class="entites.Address">
+		<property name="id">
+			<value>1</value>
+		</property>
+		<property name="street">
+			<value>Street</value>
+		</property>
+		<property name="city">
+			<value>City</value>
+		</property>
+		<property name="zip">
+			<value>Zip</value>
+		</property>
+		<property name="country">
+			<value>Country</value>
+		</property>
+	</bean>
+	<bean id="ContactBeanc" class="entites.Contact">
+		<constructor-arg>
+			<ref bean="phoneNumberBean" />
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean="contactGroupBean" />
+		</constructor-arg>
+		<constructor-arg type="Address">
+			<value>address contact</value>
+		</constructor-arg>
+		<constructor-arg type="java.lang.long">
+			<value>1</value>
+		</constructor-arg>
+		<constructor-arg type="java.lang.String">
+			<value>FirstName</value>
+		</constructor-arg>
+		<constructor-arg type="java.lang.String">
+			<value>LastName</value>
+		</constructor-arg>
+		<constructor-arg type="java.lang.String">
+			<value>Email</value>
+		</constructor-arg>
+	</bean>
+	<bean id="phoneNumberBeanC" class="entites.PhoneNumber">
+		<constructor-arg>
+			<ref bean="contactBeanc" />
+		</constructor-arg>
+		<constructor-arg type="long">
+			<value>1</value>
+		</constructor-arg>
+		<constructor-arg type="String">
+			<value>Cellular</value>
+		</constructor-arg>
+		<constructor-arg type="String">
+			<value>0659014859</value>
+		</constructor-arg>
+	</bean>
+	<bean id="contactGroupBeanC" class="entites.ContactGroup">
+		<constructor-arg>
+			<ref bean="contactBean" />
+		</constructor-arg>
+		<constructor-arg type="long">
+			<value>1</value>
+		</constructor-arg>
+		<constructor-arg type="String">
+			<value>Professional</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="addressBeanC" class="entites.Address">
+		<constructor-arg>
+			<ref bean="contactBean" />
+		</constructor-arg>
+		<constructor-arg type="long">
+			<value>1</value>
+		</constructor-arg>
+		<constructor-arg type="String">
+			<value>Street</value>
+		</constructor-arg>
+		<constructor-arg type="String">
+			<value>City</value>
+		</constructor-arg>
+		<constructor-arg type="String">
+			<value>Zip</value>
+		</constructor-arg>
+		<constructor-arg type="String">
+			<value>Country</value>
+		</constructor-arg> 	</bean>
+</beans>
+	
+		
